@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;500&display=swap');
+
+body {
+  font-family: 'Kanit', sans-serif;
+  font-size: 18px;
+  background: linear-gradient(135deg, #e0f7fa, #80deea);
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.page {
+  max-width: 500px;
+  width: 100%;
+  background: #ffffff;
+  padding: 40px 30px;
+  margin: 10px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  animation: fadeIn 0.5s ease;
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 2.2em;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 1.9em;
+}
+
+.credit {
+  text-align: center;
+  font-size: 1.05em;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+label, p {
+  display: block;
+  margin-top: 15px;
+  color: #555;
+  font-size: 1.15em;
+}
+
+/* Input container to center input and add suffix */
+.input-container {
+  position: relative;
+  width: 100%;
+  margin: 10px auto;
+  text-align: center;
+}
+
+.input-container input[type="text"] {
+  width: calc(100% - 60px); /* leave space for suffix */
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.input-suffix {
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 1.15em;
+  vertical-align: middle;
+  color: #555;
+}
+
+input[type="text"] {
+  padding: 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1.15em;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 8px rgba(76, 175, 80, 0.4);
+  outline: none;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.btn {
+  flex: 1;
+  padding: 14px;
+  background: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.15em;
+  font-family: 'Kanit', sans-serif;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  z-index: 2;
+  position: relative;
+  text-align: center;
+}
+
+.btn:hover {
+  background: #45a049;
+  transform: translateY(-3px);
+}
+
+.smallBtn {
+  font-size: 1em;
+  padding: 10px;
+}
+
+a {
+  color: #4CAF50;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.15em;
+  font-family: 'Kanit', sans-serif;
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.reference {
+  font-size: 1.15em; 
+  color: #555;
+  text-align: center;
+  margin-top: 25px;
+}
+
+/* Highlight for calculated value */
+.highlight {
+  font-size: 1.7em;
+  font-weight: bold;
+  color: #d32f2f;
+}
+
+.header-img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin: 0 auto 20px auto;
+}

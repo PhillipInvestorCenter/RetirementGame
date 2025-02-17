@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>เกษียณยังไงให้ชีวิตดี๊ดี</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Page 1: Opening -->
+  <div id="page1" class="page">
+    <img class="header-img" src="Retire.jpg" alt="Retire">
+    <h1>เกษียณยังไงให้ชีวิตดี๊ดี</h1>
+    <p class="credit">เริ่มต้นด้วยการวางแผนเพื่อเกษียณอย่างมั่นใจ</p>
+    <div class="button-group">
+      <button id="startBtn" class="btn">เริ่มต้น</button>
+    </div>
+  </div>
+
+  <!-- Page 2: Current Age -->
+  <div id="page2" class="page" style="display:none;">
+    <label>ปัจจุบันคุณอายุเท่าไร?</label>
+    <div class="input-container">
+      <input type="text" id="currentAge" placeholder="กรอกอายุ">
+      <span class="input-suffix">ปี</span>
+    </div>
+    <div class="button-group">
+      <button class="btn smallBtn backBtn" data-back="page1">ย้อนกลับ</button>
+      <button class="btn nextBtn" data-next="page3">ถัดไป</button>
+    </div>
+  </div>
+
+  <!-- Page 3: Retirement Age -->
+  <div id="page3" class="page" style="display:none;">
+    <label>คาดว่าคุณจะเกษียณตอนอายุเท่าไร?</label>
+    <div class="input-container">
+      <input type="text" id="retireAge" placeholder="กรอกอายุเกษียณ">
+      <span class="input-suffix">ปี</span>
+    </div>
+    <div class="button-group">
+      <button class="btn smallBtn backBtn" data-back="page2">ย้อนกลับ</button>
+      <button class="btn nextBtn" data-next="page4">ถัดไป</button>
+    </div>
+  </div>
+
+  <!-- Page 4: Expected Monthly Expenses -->
+  <div id="page4" class="page" style="display:none;">
+    <label>คาดว่าหลังเกษียณจะต้องใช้เงินเดือนละเท่าไร?</label>
+    <div class="input-container">
+      <input type="text" id="monthlyExpense" placeholder="กรอกจำนวนเงิน">
+      <span class="input-suffix">บาท</span>
+    </div>
+    <div class="button-group">
+      <button class="btn smallBtn backBtn" data-back="page3">ย้อนกลับ</button>
+      <button class="btn nextBtn" data-next="page5">ถัดไป</button>
+    </div>
+  </div>
+
+  <!-- Page 5: Healthcare Cost Inclusion -->
+  <div id="page5" class="page" style="display:none;">
+    <p>ค่าใช้จ่ายที่คุณกรอกมารวมค่ารักษาพยาบาลต่อปีแล้วหรือยัง?</p>
+    <label><input type="radio" name="healthcare" value="included" checked> รวมแล้ว</label>
+    <label><input type="radio" name="healthcare" value="add"> ยังไม่รวม (ต้องเพิ่มค่าใช้จ่าย)</label>
+    <div id="healthInput" style="display:none;">
+      <label>กรอกจำนวนเงินสำหรับค่ารักษาพยาบาล:</label>
+      <div class="input-container">
+        <input type="text" id="healthExtra" placeholder="กรอกจำนวนเงิน">
+        <span class="input-suffix">บาท</span>
+      </div>
+    </div>
+    <div class="button-group">
+      <button class="btn smallBtn backBtn" data-back="page4">ย้อนกลับ</button>
+      <button class="btn nextBtn" data-next="page6">ถัดไป</button>
+    </div>
+  </div>
+
+  <!-- Page 6: Inflation Information -->
+  <div id="page6" class="page" style="display:none;">
+    <h2>อย่าลืมคิดถึงเงินเฟ้อ!</h2>
+    <p style="text-align:center;">อัตราเงินเฟ้อของไทย 20 ปีย้อนหลัง (พ.ศ.2547 - 2567) เฉลี่ยต่อปี 2.12%</p>
+    <p style="text-align:center;">ข้อมูลอ้างอิง: <a href="https://app.bot.or.th/BTWS_STAT/statistics/BOTWEBSTAT.aspx?reportID=409&language=TH" target="_blank">ดูข้อมูล</a></p>
+    <div class="button-group">
+      <button class="btn smallBtn backBtn" data-back="page5">ย้อนกลับ</button>
+      <button class="btn nextBtn" data-next="page7" id="inflationNext">ถัดไป</button>
+    </div>
+  </div>
+
+  <!-- Page 7: Required Retirement Fund Calculation -->
+  <div id="page7" class="page" style="display:none;">
+    <h2>คำนวณเงินที่ต้องใช้หลังเกษียณ</h2>
+    <p id="resultRequired" class="result-text"></p>
+    <p class="reference" style="font-size:1.15em; color:#555; text-align:center; margin-top:25px;">
+      เราจะคำนวณโดยใช้ข้อมูลว่า คนไทยมีอายุเฉลี่ยอยู่ที่ 83 ปี <a href="https://workpointtoday.com/tisco-wealth/" target="_blank" style="color:#4CAF50;">(ข้อมูลเพิ่มเติม)</a>
+    </p>
+    <div class="button-group">
+      <button class="btn smallBtn backBtn" data-back="page6">ย้อนกลับ</button>
+      <button class="btn nextBtn" data-next="page8" id="calcNext">คำนวณ</button>
+    </div>
+  </div>
+
+  <!-- Page 8: Conclusion & Restart -->
+  <div id="page8" class="page" style="display:none;">
+    <h2>ผลการคำนวณ</h2>
+    <div id="finalMessage" class="result-text"></div>
+    <div class="button-group">
+      <a href="https://www.fame.in.th/v3/#/smartplan" target="_blank" class="btn">Smart Plan</a>
+      <button id="restartBtn" class="btn">เริ่มใหม่</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
