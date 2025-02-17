@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function(){
     });
   });
 
-  // Format numeric inputs with commas
+  // Format numeric inputs with commas, removing non-digit chars
   function addCommaFormatting(element) {
     element.addEventListener('input', function(e) {
       let value = e.target.value.replace(/,/g, '').replace(/\D/g, '');
