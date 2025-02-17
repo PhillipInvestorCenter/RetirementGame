@@ -21,7 +21,13 @@
   <div id="page2" class="page" style="display:none;">
     <label>ปัจจุบันคุณอายุเท่าไร?</label>
     <div class="input-container">
-      <input type="text" id="currentAge" placeholder="กรอกอายุ">
+      <input 
+        type="text" 
+        id="currentAge" 
+        placeholder="กรอกอายุ" 
+        pattern="[0-9]*" 
+        inputmode="numeric"
+      >
       <span class="input-suffix">ปี</span>
     </div>
     <div class="button-group">
@@ -34,7 +40,13 @@
   <div id="page3" class="page" style="display:none;">
     <label>คาดว่าคุณจะเกษียณตอนอายุเท่าไร?</label>
     <div class="input-container">
-      <input type="text" id="retireAge" placeholder="กรอกอายุเกษียณ">
+      <input 
+        type="text" 
+        id="retireAge" 
+        placeholder="กรอกอายุเกษียณ" 
+        pattern="[0-9]*" 
+        inputmode="numeric"
+      >
       <span class="input-suffix">ปี</span>
     </div>
     <div class="button-group">
@@ -46,9 +58,15 @@
   <!-- Page 4: Expected Monthly Expenses -->
   <div id="page4" class="page" style="display:none;">
     <label>คาดว่าหลังเกษียณจะต้องใช้เงินเดือนละเท่าไร?</label>
-    <div class="input-container">
-      <input type="text" id="monthlyExpense" placeholder="กรอกจำนวนเงิน">
-      <span class="input-suffix">บาท</span>
+    <div class="input-row">
+      <input 
+        type="text" 
+        id="monthlyExpense" 
+        placeholder="กรอกจำนวนเงิน" 
+        pattern="[0-9]*" 
+        inputmode="numeric"
+      >
+      <span class="suffix">บาท</span>
     </div>
     <div class="button-group">
       <button class="btn smallBtn backBtn" data-back="page3">ย้อนกลับ</button>
@@ -64,7 +82,13 @@
     <div id="healthInput" style="display:none;">
       <label>กรอกจำนวนเงินสำหรับค่ารักษาพยาบาล:</label>
       <div class="input-container">
-        <input type="text" id="healthExtra" placeholder="กรอกจำนวนเงิน">
+        <input 
+          type="text" 
+          id="healthExtra" 
+          placeholder="กรอกจำนวนเงิน" 
+          pattern="[0-9]*" 
+          inputmode="numeric"
+        >
         <span class="input-suffix">บาท</span>
       </div>
     </div>
@@ -90,7 +114,8 @@
     <h2>คำนวณเงินที่ต้องใช้หลังเกษียณ</h2>
     <p id="resultRequired" class="result-text"></p>
     <p class="reference" style="font-size:1.15em; color:#555; text-align:center; margin-top:25px;">
-      เราจะคำนวณโดยใช้ข้อมูลว่า คนไทยมีอายุเฉลี่ยอยู่ที่ 83 ปี <a href="https://workpointtoday.com/tisco-wealth/" target="_blank" style="color:#4CAF50;">(ข้อมูลเพิ่มเติม)</a>
+      เราจะคำนวณโดยใช้ข้อมูลว่า คนไทยมีอายุเฉลี่ยอยู่ที่ 83 ปี 
+      <a href="https://workpointtoday.com/tisco-wealth/" target="_blank" style="color:#4CAF50;">(ข้อมูลเพิ่มเติม)</a>
     </p>
     <div class="button-group">
       <button class="btn smallBtn backBtn" data-back="page6">ย้อนกลับ</button>
