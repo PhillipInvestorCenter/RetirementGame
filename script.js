@@ -160,14 +160,16 @@ document.addEventListener('DOMContentLoaded', function(){
     const requiredString = requiredFund.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 
     document.getElementById('resultRequired').innerHTML =
-      "เงินที่คุณต้องใช้หลังเกษียณ: <span class='highlight'>" + requiredString + "</span> บาท";
+      "เงินที่คุณจำเป็นต้องมีหลังเกษียณ: <span class='highlight'>" + requiredString + "</span> บาท";
   }
   document.getElementById('calcNext').addEventListener('click', calculateRequiredFund);
 
-  // Final page: Display summary message on Page 8
+  // Final page: Display summary message on Page 8 with monthly expense line
   function displayFinalMessage() {
     const finalMsg = document.getElementById('resultRequired').innerHTML;
-    const message = finalMsg + "<br><br>" +
+    const monthlyExpenseValue = document.getElementById('monthlyExpense').value;
+    const expenseMessage = "เพื่อให้เพียงพอต่อการใช้จ่ายเดือนละ " + monthlyExpenseValue + " บาท";
+    const message = finalMsg + "<br>" + expenseMessage + "<br><br>" +
       "หากคุณต้องการวางแผนเก็บเงินเพิ่ม กรุณาตรวจสอบแผน Smart Plan ของเรา";
     document.getElementById('finalMessage').innerHTML = message;
   }
