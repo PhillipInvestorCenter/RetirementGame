@@ -136,8 +136,6 @@ document.addEventListener('DOMContentLoaded', function(){
 
   // Calculate adjusted monthly expense based on healthcare choice
   function calculateAdjustedExpense() {
-    const currentAge = Number(document.getElementById('currentAge').value.replace(/,/g, ''));
-    const retireAge = Number(document.getElementById('retireAge').value.replace(/,/g, ''));
     let baseExpense = Number(document.getElementById('monthlyExpense').value.replace(/,/g, ''));
     
     // Add healthcare extra if chosen
@@ -164,11 +162,10 @@ document.addEventListener('DOMContentLoaded', function(){
   }
   document.getElementById('calcNext').addEventListener('click', calculateRequiredFund);
 
-  // Final page: Display summary message on Page 8 with monthly expense line
+  // Final page: Display summary message on Page 8 with adjusted monthly expense line
   function displayFinalMessage() {
     const finalMsg = document.getElementById('resultRequired').innerHTML;
-    const monthlyExpenseValue = document.getElementById('monthlyExpense').value;
-    const expenseMessage = "เพื่อให้เพียงพอต่อการใช้จ่ายเดือนละ " + monthlyExpenseValue + " บาท";
+    const expenseMessage = "เพื่อให้เพียงพอต่อการใช้จ่ายเดือนละ " + adjustedExpense.toLocaleString('en-US') + " บาท";
     const message = finalMsg + "<br>" + expenseMessage + "<br><br>" +
       "หากคุณต้องการวางแผนเก็บเงินเพิ่ม กรุณาตรวจสอบแผน Smart Plan ของเรา";
     document.getElementById('finalMessage').innerHTML = message;
