@@ -9,16 +9,23 @@
 <body>
   <!-- Page 1: Opening -->
   <div id="page1" class="page">
+    <div class="logo-container">
+      <img class="company-logo" src="phillip-logo-blue.png" alt="Company Logo">
+    </div>
     <img class="header-img" src="Retire.jpg" alt="Retire">
     <h1>เกษียณยังไงให้ชีวิตดี๊ดี</h1>
     <p class="credit">เริ่มต้นด้วยการวางแผนเพื่อเกษียณอย่างมั่นใจ</p>
     <div class="button-group">
       <button id="startBtn" class="btn">เริ่มต้น</button>
     </div>
+    <p class="created-credit">Created by Suntiphab Vareenitisakul WB-PIC-LC</p>
   </div>
 
   <!-- Page 2: Current Age -->
   <div id="page2" class="page" style="display:none;">
+    <div class="logo-container">
+      <img class="company-logo" src="phillip-logo-blue.png" alt="Company Logo">
+    </div>
     <label>ปัจจุบันคุณอายุเท่าไร?</label>
     <div class="input-container">
       <input 
@@ -38,6 +45,9 @@
 
   <!-- Page 3: Retirement Age -->
   <div id="page3" class="page" style="display:none;">
+    <div class="logo-container">
+      <img class="company-logo" src="phillip-logo-blue.png" alt="Company Logo">
+    </div>
     <label>คาดว่าคุณจะเกษียณตอนอายุเท่าไร?</label>
     <div class="input-container">
       <input 
@@ -57,6 +67,9 @@
 
   <!-- Page 4: Expected Monthly Expenses -->
   <div id="page4" class="page" style="display:none;">
+    <div class="logo-container">
+      <img class="company-logo" src="phillip-logo-blue.png" alt="Company Logo">
+    </div>
     <label>คาดว่าหลังเกษียณจะต้องใช้เงินเดือนละเท่าไร?</label>
     <div class="input-row">
       <input 
@@ -76,6 +89,9 @@
 
   <!-- Page 5: Healthcare Cost Inclusion -->
   <div id="page5" class="page" style="display:none;">
+    <div class="logo-container">
+      <img class="company-logo" src="phillip-logo-blue.png" alt="Company Logo">
+    </div>
     <p>ค่าใช้จ่ายที่คุณกรอกมารวมค่ารักษาพยาบาลต่อเดือนแล้วหรือยัง?</p>
     <label><input type="radio" name="healthcare" value="included" checked> รวมแล้ว</label>
     <label><input type="radio" name="healthcare" value="add"> ยังไม่รวม (ต้องเพิ่มค่าใช้จ่าย)</label>
@@ -100,6 +116,9 @@
 
   <!-- Page 6: Inflation Information -->
   <div id="page6" class="page" style="display:none;">
+    <div class="logo-container">
+      <img class="company-logo" src="phillip-logo-blue.png" alt="Company Logo">
+    </div>
     <h2>อย่าลืมคิดถึงเงินเฟ้อ!</h2>
     <p style="text-align:center;">อัตราเงินเฟ้อของไทย 20 ปีย้อนหลัง (พ.ศ.2547 - 2567) เฉลี่ยต่อปี 2.12%</p>
     <p style="text-align:center;">ข้อมูลอ้างอิง <a href="https://app.bot.or.th/BTWS_STAT/statistics/BOTWEBSTAT.aspx?reportID=409&language=TH" target="_blank">ดูข้อมูล</a></p>
@@ -111,6 +130,9 @@
 
   <!-- Page 7: Required Retirement Fund Calculation -->
   <div id="page7" class="page" style="display:none;">
+    <div class="logo-container">
+      <img class="company-logo" src="phillip-logo-blue.png" alt="Company Logo">
+    </div>
     <h2>คำนวณเงินที่ต้องใช้หลังเกษียณ</h2>
     <p id="resultRequired" class="result-text"></p>
     <p class="reference" style="font-size:1.15em; color:#555; text-align:center; margin-top:25px;">
@@ -125,6 +147,9 @@
 
   <!-- Page 8: Conclusion & Restart -->
   <div id="page8" class="page" style="display:none;">
+    <div class="logo-container">
+      <img class="company-logo" src="phillip-logo-blue.png" alt="Company Logo">
+    </div>
     <h2>ผลการคำนวณ</h2>
     <div id="finalMessage" class="result-text"></div>
     <div class="button-group">
