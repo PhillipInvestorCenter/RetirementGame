@@ -68,14 +68,14 @@ h2 {
 
 .credit {
   text-align: center;
-  font-size: 1.05em;
+  font-size: 1em;
   color: #666;
   margin-bottom: 25px;
 }
 
 /* Smaller created-credit text */
 .created-credit {
-  font-size: 0.50em;
+  font-size: 0.45em;
   text-align: center;
   color: #777;
   margin-top: 10px;
