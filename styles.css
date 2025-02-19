@@ -30,6 +30,20 @@ body {
   to { opacity: 1; transform: translateY(0); }
 }
 
+/* Logo container styles */
+.logo-container {
+  background: #fff;
+  text-align: center;
+  padding: 10px 0;
+  margin-bottom: 20px;
+}
+
+/* Increased logo size */
+.company-logo {
+  max-width: 180px;
+  height: auto;
+}
+
 .header-img {
   display: block;
   max-width: 100%;
@@ -59,6 +73,14 @@ h2 {
   margin-bottom: 25px;
 }
 
+/* Smaller created-credit text */
+.created-credit {
+  font-size: 0.75em;
+  text-align: center;
+  color: #777;
+  margin-top: 10px;
+}
+
 label, p {
   display: block;
   margin-top: 15px;
@@ -66,7 +88,7 @@ label, p {
   font-size: 1.15em;
 }
 
-/* Container for pages 2,3,5 - input + suffix in a row, centered. */
+/* Input container styles */
 .input-container {
   display: flex;
   justify-content: center;
@@ -89,7 +111,7 @@ label, p {
   color: #555;
 }
 
-/* For page 4 specifically: .input-row with suffix "บาท" */
+/* For page 4: input row with suffix */
 .input-row {
   display: flex;
   justify-content: center;
