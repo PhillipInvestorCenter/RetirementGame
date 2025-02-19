@@ -44,6 +44,11 @@ document.addEventListener('DOMContentLoaded', function(){
         document.getElementById('retireAge').focus();
         return false;
       }
+      if (Number(val.replace(/,/g, '')) >= 83) {
+        alert("อายุที่คุณคาดว่าจะเกษียณต้องน้อยกว่า 83");
+        document.getElementById('retireAge').focus();
+        return false;
+      }
     }
     if (id === "page4") {
       const val = document.getElementById('monthlyExpense').value.trim();
